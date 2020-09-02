@@ -1,0 +1,13 @@
+def cuenta_subcadenas_ax(cadena):
+    cnt = 0
+    for i in range(len(cadena) - 1):
+        if cadena[i] == 'A':
+            cnt += cadena[i+1:].count('X')
+    return cnt
+    
+>>> cuenta_subcadenas_ax('CAXAAYXZA')
+4
+>>> cuenta_subcadenas_ax('AAXOXXA')
+6
+>>> cuenta_subcadenas_ax('AXAXAXAXAX')
+15
